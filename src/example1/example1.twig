@@ -1,0 +1,33 @@
+{% extends "../_base.twig" %}
+{% set data = example1|raw %}
+
+{% set page_title = "Example 1" %}
+{% set css = "example1" %}
+{% set js = "example1" %}
+
+{% block content %}
+	{% embed "../library/layouts/_band.twig" %}
+	
+		{% block band_header %}
+			{% include "../library/components/_header.twig" with {
+				"title": data.header.title,
+				"headline": data.header.headline
+			} only %}
+		{% endblock %}
+		
+		{% block band_body %}
+			{% for card in data.cards %}
+				{% for side in card %}
+					{% include "../library/layouts/_card.twig" with side only %}
+				{% endfor %}
+			{% endfor %}
+		{% endblock %}
+	
+		{% block band_footer %}
+			{% include "../library/components/_copy.twig" with {
+				"content": data.footer.content
+			} only %}
+		{% endblock %}
+	
+	{% endembed %}
+{% endblock %}
