@@ -1,7 +1,7 @@
 {
-  "name": "front-end-challenge",
+  "name": "front-end-coding-challenge",
   "version": "1.0.0",
-  "description": "A front-end coding challenge by the site systems team at Red Hat.",
+  "description": "A front-end coding challenge for prospective site systems team members at Red Hat.",
   "main": "Gruntfile.js",
   "repository": "https://github.com/castastrophe/front-end-coding-test",
   "scripts": {
@@ -45,5 +45,6 @@
     "node-sass": "^4.14.1",
     "pixrem": "^5.0.0",
     "postcss": "^7.0.32"
-  }
+  },
+  "keywords": []
 }
